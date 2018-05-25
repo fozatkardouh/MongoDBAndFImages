@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Image</title>
+</head>
+<body>
+<p th:unless="${imageId}">There is no image</p>
+<a th:href="@{/upload}">To upload</a>
+<img th:if="${imageId}" th:src="@{/api/images/{id} (id=${imageId})}" />
+</body>
+</html>
